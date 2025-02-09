@@ -9,6 +9,7 @@
   <div id="nav-bar">
       <div id="logo" class="fade-down"> 
           <p class="logo-title">HTMLearn</p>
+          <img class= logo-small src="assets/logo_small.png">
       </div>
       
       <div id="menu" class="fade-down">
@@ -33,7 +34,7 @@
         <h1 class="title">Learn to code</h1>
         <h2 class="subtitle">All in one place</h2>
       </div>
-        <button class="button-get-started fade-up">Get started</button>
+        <button onclick="scrollFunction()" class="button-get-started fade-up">Get started</button>
     </div>
 
     <div class="image-container">
@@ -46,28 +47,30 @@
 
 
 
-    <div class="programming-languages">
+    <div id="programming-languages" class="programming-languages">
         <h2 class="languages-title">Programming Languages</h2>
         <div class="languages-container">
 
-          <div class="language=cs">
-            <i class="fa-brands fa-css"></i>
-            <p class="language-name">CSS</p>
-          </div>
-
-          <div class="language">
+          <div class="language-btn">
             <i class="fa-brands fa-html5"></i>
-            <p class="language-name">HTML</p>
           </div>
 
-          <div class="language">
-            <i class="fa-brands fa-js"></i>
-            <p class="language-name">JavaScript</p>
+          <div class="language-btn">
+            <i class="fa-brands fa-css3-alt"></i>
           </div>
+
+          <div class="language-btn">
+            <i class="fa-brands fa-python"></i>
+          </div>
+         </div>
+         <div class="languages-names-container">
+            <p class="language-name">HTML</p>
+            <p class="language-name">CSS</p>
+            <p class="language-name">Python</p>
         </div>
       </div>
 
-
+<!--
       <div class="footer">
         <div class="footer-section learn-more">
           <p class="footer-title">Learn More</p>
@@ -84,12 +87,16 @@
           <p class="footer-title">More</p>
           <p class="footer-links"><a href="#">GitHub</a></p>
         </div>
-      </div>
-
-
-
-
+      </div> -->
 
 </body>
-
+<script>
+    function scrollFunction() {
+      const element = document.getElementById('programming-languages')
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+</script>
 </html>
