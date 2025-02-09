@@ -6,9 +6,10 @@ body {
     height: 3086px;
 }
 
+/* START MENU BAR */
 
 #logo {
-    position: absolute;
+    position: fixed;
     width: 143px;
     height: 48px;
     left: 16px;
@@ -20,9 +21,9 @@ body {
 }
 
 .logo-title {
-    position: absolute;
-    left: 60px;
-    top: 3px;
+    position: fixed;
+    left: 71px;
+    top: 11px;
     font-family: 'LondonBetween';
     font-style: normal;
     font-weight: 500;
@@ -31,7 +32,7 @@ body {
 }
 
 #menu {
-    position: absolute;
+    position: fixed;
     width: 736px;
     height: 48px;
     right: 16px;
@@ -40,19 +41,37 @@ body {
     opacity: 0.85;
     border: 1px solid #135968;
     border-radius: 50px;
+    overflow: hidden;
 }
 
 #menu-home {
-    right: 650px;
-    top: 15px;
+    right: 670px;
 }
 #menu-html {
-    right: 630px;
-    top: 15px;
+    right: 600px;
+}
+#arrow-down-html {
+    right: 585px;
+}
+#menu-css {
+    right: 515px;
+}
+#arrow-down-css {
+    right: 515px;
+}
+#menu-python {
+    right: 445px;
+}
+#arrow-down-python {
+    right: 420px;
+}
+#menu-about {
+    right: 330px;
+    width: 70px
 }
 
 .menu-text {
-    position: absolute;
+    position: fixed;
     width: 48px;
     height: 16px;
     font-family: 'Work Sans';
@@ -61,4 +80,49 @@ body {
     font-size: 15px;
     color: #FFFFFF;
     text-decoration: none;
+    top: 24px;
 }
+.menu-text:hover {
+    color: #00C4E3;
+}
+
+.arrow-down {
+    position: fixed;
+    color: white;
+    top: 24px;
+}
+
+.github-logo {
+    position: fixed;
+    color: white;
+    top: 19px;
+    right: 280px;
+    font-size: 25px;
+}
+
+.github-logo:hover {
+    position: fixed;
+    color: #00C4E3;
+    cursor: pointer;
+}
+
+#search {
+    position: fixed;
+    width: 183px;
+    height: 29px;
+    right: 45px;
+    top: 18px;
+    background: #163540;
+    color: white;
+    opacity: 0.8;
+    border-radius: 50px;
+    border: none;
+    padding-left: 20px;
+}
+
+#search::placeholder {
+    color: white;
+}
+
+/* END MENU BAR */
+
