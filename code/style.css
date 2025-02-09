@@ -1,12 +1,51 @@
 @import url('https://fonts.cdnfonts.com/css/london-between');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+/* Animations */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    animation: slideUp 0.8s ease-in-out forwards;
+}
+
+.fade-down {
+    opacity: 0;
+    animation: slideDown 0.8s ease-in-out forwards;
+}
+
 body {
     background: radial-gradient(129.35% 54.92% at 50.04% 2.35%, #135968 0%, #0E2530 51.92%, #0E242F 54.53%, #0D0D0D 100%);
     height: 3086px;
 }
 
 /* START MENU BAR */
+#nav-bar {
+    z-index: 2;
+}
+
 
 #logo {
     position: fixed;
@@ -22,8 +61,8 @@ body {
 
 .logo-title {
     position: fixed;
-    left: 71px;
-    top: 11px;
+    left: 55px;
+    top: 4px;
     font-family: 'LondonBetween';
     font-style: normal;
     font-weight: 500;
@@ -45,28 +84,28 @@ body {
 }
 
 #menu-home {
-    right: 670px;
+    right: 650px;
 }
 #menu-html {
-    right: 600px;
+    right: 580px;
 }
 #arrow-down-html {
-    right: 585px;
+    right: 565px;
 }
 #menu-css {
-    right: 515px;
+    right: 495px;
 }
 #arrow-down-css {
-    right: 515px;
+    right: 495px;
 }
 #menu-python {
-    right: 445px;
+    right: 425px;
 }
 #arrow-down-python {
-    right: 420px;
+    right: 400px;
 }
 #menu-about {
-    right: 330px;
+    right: 310px;
     width: 70px
 }
 
@@ -80,7 +119,7 @@ body {
     font-size: 15px;
     color: #FFFFFF;
     text-decoration: none;
-    top: 24px;
+    top: 15px;
 }
 .menu-text:hover {
     color: #00C4E3;
@@ -89,14 +128,14 @@ body {
 .arrow-down {
     position: fixed;
     color: white;
-    top: 24px;
+    top: 15px;
 }
 
 .github-logo {
     position: fixed;
     color: white;
-    top: 19px;
-    right: 280px;
+    top: 10px;
+    right: 260px;
     font-size: 25px;
 }
 
@@ -110,8 +149,8 @@ body {
     position: fixed;
     width: 183px;
     height: 29px;
-    right: 45px;
-    top: 18px;
+    right: 25px;
+    top: 9px;
     background: #163540;
     color: white;
     opacity: 0.8;
@@ -131,7 +170,7 @@ body {
     width: 651px;
     height: 110px;
     left: 379px;
-    top: 200px;
+    top: 150px;
 
     font-family: 'Work Sans';
     font-style: normal;
@@ -150,7 +189,7 @@ body {
     width: 729px;
     height: 110px;
     left: 340px;
-    top: 300px;
+    top: 250px;
 
     font-family: 'Work Sans';
     font-style: normal;
@@ -169,7 +208,7 @@ body {
     width: 150px;
     height: 48px;
     left: 622px;
-    top: 530px;
+    top: 500px;
     border: none;
     background: #F1F2F2;
     box-shadow: 0px 0px 20px #FFFFFF;
@@ -177,10 +216,24 @@ body {
     font-family: 'Work Sans';
     font-weight: 700;
     transition: transform 0.3s ease-in-out;
+    animation-delay: 0.3s;
 }
 
 .button-get-started:hover {
     transform: scale(1.05); 
     cursor: pointer;
+}
+
+/* START IMAGE */
+
+.body-image {
+    position: absolute;
+    width: 1102px;
+    height: 734px;
+    left: 154px;
+    top: 760px;
+    border-radius: 50px;
+    z-index: -1;
+    animation-delay: 0.6s;
 }
 
