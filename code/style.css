@@ -42,12 +42,19 @@ body {
     border-radius: 50px;
 }
 
+#menu-home {
+    right: 650px;
+    top: 15px;
+}
+#menu-html {
+    right: 630px;
+    top: 15px;
+}
+
 .menu-text {
     position: absolute;
     width: 48px;
     height: 16px;
-    right: 650px;
-    top: 15px;
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 700;
