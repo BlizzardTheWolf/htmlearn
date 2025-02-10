@@ -36,10 +36,16 @@
     animation: slideDown 0.8s ease-in-out forwards;
 }
 
+
 body {
-    background: radial-gradient(129.35% 54.92% at 50.04% 2.35%, #135968 0%, #0E2530 51.92%, #0E242F 54.53%, #0D0D0D 100%);
+    background-color: #0b191e;
     height: 3086px;
     margin: 0;
+}
+
+#wrapper {
+    background: radial-gradient(129.35% 54.92% at 50.04% 2.35%, #135968 0%, #0E2530 51.92%, #0E242F 54.53%, #0D0D0D 100%);
+    z-index: 1;
 }
 
 /* START MENU BAR */
@@ -242,7 +248,7 @@ body {
     height: 599px;
     margin-top: 200px;
     border-radius: 50px;
-    z-index: -1;
+    z-index: 0;
     animation-delay: 0.6s;
 }
 
@@ -307,15 +313,20 @@ body {
     margin-left: 15px;
     transition: transform 0.3s ease-in-out;
     z-index: 0;
+    text-decoration: none;
 }
 
 .language-btn:hover {
     transform: scale(1.05);
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .language-btn i {
     font-size: 270px;
     margin-bottom: 10px;
+    color: black;
+    text-decoration: none;
 }
 
 .language-name {
