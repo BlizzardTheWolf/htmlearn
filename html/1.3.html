@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="nav-bar">
+            <a href="../index.html" id="logo-button"><div id="logo" class="fade-down"> 
+                <p class="logo-title">HTMLearn</p>
+                <img class= logo-small src="../assets/logo_small.png">
+            </div></a>
+            
+            <div id="menu" class="fade-down">
+                <a href="../index.html" class="menu-text" id="menu-home">Home</a>
+                <a href="../html/1.1.html" class="menu-text" id="menu-html">HTML</a>
+                <a class="arrow-down" id="arrow-down-html"><i class="fa-solid fa-caret-down"></i></a>
+                <a href="css/1.1.html" class="menu-text" id="menu-css">CSS</a>
+                <a class="arrow-down" id="arrow-down-css"><i class="fa-solid fa-caret-down"></i></a>
+                <a href="python/1.1.html" class="menu-text" id="menu-python">Python</a>
+                <a class="arrow-down" id="arrow-down-python"><i class="fa-solid fa-caret-down"></i></a>
+                <a href="../about.html" class="menu-text" id="menu-about">About Us</a>
+                <a href="https://github.com/BlizzardTheWolf/htmlearn" class="github-logo"><i class="fa-brands fa-github"></i></a>
+                <search>
+                  <form onsubmit="searchFunction(event)">
+                    <input name="search" id="search" placeholder="Search...">
+                  </form>
+                </search>
+            </div>
+          </div>
+          <div class="heading">
+            <div class="fade-up">
+                <a href="1.2.html" class="previous-theory"><i class="fa-solid fa-caret-left"></i> &ensp;1.2</i></a>
+                <h1 class="title" id="alttitle">1.3 - Advanced Techniques</h1>
+                <h2 class="subtitle" id="subtitle">Structure & embedding</h2>
+                <a onclick="scrollFunction()"><i class="fa-solid fa-caret-down big-arrow-down"></i></a>
+            </div>
+          </div>
+          <div class="theory">
+            <h3 id="scrolldiv" class="theory-title">Semantic Elements</h3>
+            <p class="theory-text">Semantic elements improve <b>SEO and accessibility</b> by clearly defining page structure.</p>
+            <div class="codebox" id="semanticbox">
+                <p class="code"><b>&lt;header&gt;</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;h1&gt;</b>Welcome to My Blog<b>&lt;/h1&gt;</b><br>
+                    <b>&lt;/header&gt;</b><br>
+                    <b>&lt;nav&gt;</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;a</b> href=&quot;home.html&quot;<b>&gt;</b>Home<b>&lt;/a&gt;</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;a</b> href=&quot;about.html&quot;<b>&gt;</b>About<b>&lt;/a&gt;</b><br>
+                    <b>&lt;/nav&gt;</b><br>
+                    <b>&lt;section&gt;</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;article&gt;</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;h2&gt;</b>My First Blog Post<b>&lt;/h2&gt;</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;p&gt;</b>This is a great post about web development.<b>&lt;/p&gt;</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;/article&gt;</b><br>
+                    <b>&lt;/section&gt;</b><br>
+                    <b>&lt;footer&gt;</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;p&gt;</b>&amp;copy; 2024 My Website<b>&lt;/p&gt;</b><br>
+                    <b>&lt;/footer&gt;</b>
+                    </p>
+            </div>
+            <h3 class="theory-title">Embedding Media: Videos, Audio, and Iframes</h3>
+            <p class="theory-text"><b>Adding a Video</b></p>
+            <div class="twocolumns">
+                <div class="codebox code2" id="videocontrols">
+                  <p class="code"><b>&lt;video</b> controls<b>&gt;</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;source</b> src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;<b>&gt;</b><br>
+                    <b>&lt;/video&gt;</b>                    
+                  </p>
+                </div>
+                <div class="codebox code2">
+                  <video controls><source src="../assets/video.mp4" type="video/mp4"></video>
+                </div>
+              </div>
+              <p class="theory-text"><b>Adding Audio:</b></p>
+              <div class="twocolumns">
+                <div class="codebox code2">
+                  <p class="code"><b>&lt;audio</b> controls<b>&gt;</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;source</b> src=&quot;audio.mp3&quot; type=&quot;audio/mpeg&quot;<b>&gt;</b><br>
+                    <b>&lt;/audio&gt;</b>                    
+                  </p>
+                </div>
+                <div class="codebox code2">
+                    <audio controls><source src="../assets/audio.mp3" type="audio/mpeg"></audio>
+                </div>
+              </div>
+              <p class="theory-text"><b>Embedding Websites</b></p><br>
+              <p class="code code-indent"><code><b>&lt;iframe</b> src=&quot;index.html&quot; width=&quot;600&quot; height=&quot;400&quot;<b>&gt;</b><b>&lt;/iframe&gt;</b></code></p>
+              <h3 class="theory-title">Conclusion</h3>
+              <p class="theory-text">By mastering HTML's structure, semantic elements, tables, lists, images, media, and accessibility, developers can create professional, well-optimized websites.</p>
+          </div>
+          <div class="footer">
+            <img src="../assets/logo_big.png" class="logo-big">
+            <div class="footer-section learn-more">
+              <p class="footer-title">Learn More</p>
+              <p><a class="footer-links" href="../about.html">About Us</a></p>
+              <p><a class="footer-links">Privacy Policy</a></p>
+            </div>
+            <div class="footer-section more">
+              <p class="footer-title">More</p>
+              <p><a href="https://github.com/BlizzardTheWolf/htmlearn" class="footer-icon"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
+<script>
+    function scrollFunction() {
+    const element = document.getElementById('scrolldiv');
+    window.scrollTo({
+        top: element.offsetTop - 50, 
+        behavior: "smooth"
+    });
+}
+
+function searchFunction(event) {
+    event.preventDefault();
+    removeHighlights();
+    const searchQuery = document.getElementById('search').value.toLowerCase();
+    if (searchQuery.trim() === "") return;
+    const matches = highlightSearchTerm(searchQuery);
+    if (matches.length > 0) {
+        scrollToFirstMatch(matches);
+    } else {
+        alert('No results found.');
+    }
+}
+
+function highlightSearchTerm(searchQuery) {
+    const regex = new RegExp(`(${searchQuery})`, 'gi');
+    const matches = [];
+    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    while (node = walk.nextNode()) {
+        const match = node.textContent.match(regex);
+        if (match) {
+            const span = document.createElement('span');
+            const highlightedText = node.textContent.replace(regex, '<span class="highlighted">$1</span>');
+            span.innerHTML = highlightedText;
+            node.replaceWith(span);
+            matches.push(span);
+        }
+    }
+    return matches;
+}
+
+function scrollToFirstMatch(matches) {
+    const firstMatch = matches[0];
+    if (firstMatch) {
+        firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function removeHighlights() {
+    const highlightedElements = document.querySelectorAll('.highlighted');
+    highlightedElements.forEach(element => {
+        const parentNode = element.parentNode;
+        parentNode.replaceChild(document.createTextNode(element.textContent), element);
+    });
+}
+
+</script>
