@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="nav-bar">
+            <a href="../index.html" id="logo-button"><div id="logo" class="fade-down"> 
+                <p class="logo-title">HTMLearn</p>
+                <img class= logo-small src="../assets/logo_small.png">
+            </div></a>
+            
+            <div id="menu" class="fade-down">
+                <a href="../index.html" class="menu-text" id="menu-home">Home</a>
+                <a href="../html/1.1.html" class="menu-text" id="menu-html">HTML</a>
+                <a class="arrow-down" id="arrow-down-html"><i class="fa-solid fa-caret-down"></i></a>
+                <a href="../css/1.1.html" class="menu-text" id="menu-css">CSS</a>
+                <a class="arrow-down" id="arrow-down-css"><i class="fa-solid fa-caret-down"></i></a>
+                <a href="../python/1.1.html" class="menu-text" id="menu-python">Python</a>
+                <a class="arrow-down" id="arrow-down-python"><i class="fa-solid fa-caret-down"></i></a>
+                <a href="../about.html" class="menu-text" id="menu-about">About Us</a>
+                <a href="https://github.com/BlizzardTheWolf/htmlearn" class="github-logo"><i class="fa-brands fa-github"></i></a>
+                <search>
+                  <form onsubmit="searchFunction(event)">
+                    <input name="search" id="search" placeholder="Search...">
+                  </form>
+                </search>
+            </div>
+          </div>
+          <div class="heading">
+            <div class="fade-up">
+                <a href="1.3.html" class="next-theory">1.3 &ensp;<i class="fa-solid fa-caret-right"></i></a>
+                <a href="1.1.html" class="previous-theory"><i class="fa-solid fa-caret-left"></i> &ensp;1.1</i></a>
+                <h1 class="title" id="alttitle">1.2 - Intermediate CSS</h1>
+                <h2 class="subtitle" id="subtitle">Selectors, Box Model, Flexboxes</h2>
+                <a onclick="scrollFunction()"><i class="fa-solid fa-caret-down big-arrow-down"></i></a>
+            </div>
+          </div>
+          <div class="theory">
+            <h3 id="scrolldiv" class="theory-title">Introduction to Intermediate CSS: </h3>
+            <p class="theory-text">Intermediate CSS concepts provide developers with the tools to craft well-structured, flexible, and visually engaging web pages. At this stage, developers delve deeper into the power of CSS by mastering advanced selectors, which allow for precise targeting of HTML elements, enhancing both efficiency and maintainability. The box model becomes an essential foundation, helping developers understand how margins, borders, padding, and content interact to create visually consistent designs. Additionally, flexbox emerges as a powerful layout system, enabling developers to efficiently align, distribute, and position elements within containers, making responsive design more intuitive and effective. Mastering these concepts paves the way for creating dynamic, polished, and professional-looking websites.</p>
+            <h3 class="theory-title">Common CSS Selectors:</h3>
+            <ul>
+                <li class="theory-text"><b>Type Selector:</b> Styles all instances of an element. (p, h1, h2, h3, button)</li>
+                <li class="theory-text"><b>Class Selector (.):</b> Applies styles to multiple elements with the same class. (class="")</li>
+                <li class="theory-text"><b>ID Selector (#)</b> Targets a single, unique element. (id="")</li>
+                <li class="theory-text"><b>Group Selector (,):</b> Used to divide elements to give them all the same style.</li>
+                <li class="theory-text"><b>Universal Selector (*): </b>Applies styles globally.</li>
+            </ul>
+            <h3 class="theory-title">Understanding the CSS Box Model:</h3>
+            <div class="twocolumns">
+              <div class="codebox code2">
+                <p class="code"><b>div {</b>
+                    <br>&nbsp;&nbsp;width: 250px;
+                    <br>&nbsp;&nbsp;padding: 15px;
+                    <br>&nbsp;&nbsp;border: 2px dashed gray;
+                    <br>&nbsp;&nbsp;margin: 20px;
+                    <br>&nbsp;&nbsp;box-sizing: border-box;
+                  <br><b>}</b>
+                </p>
+              </div>
+              <div class="codebox code2">
+                <img src="../assets/css1.png">
+            </div>
+            </div>
+            <br>
+            <p class="theory-text">Explanation:</p>
+            <ul>
+                <li class="theory-text"><b>width:</b> Specifies the width of the element.</li>
+                <li class="theory-text"><b>padding:</b> Space between content and the border.</li>
+                <li class="theory-text"><b>border:</b> Outlines the padding and content.</li>
+                <li class="theory-text"><b>margin:</b> Space outside the border, separating the element from others.</li>
+                <li class="theory-text"><b>box-sizing:</b> Specifies what it included in the element’s total width and height.</li>
+            </ul>
+            <h3 class="theory-text">Flexbox for Responsive Layouts:</h3>
+                <div class="codebox code2">
+                    <p class="code"><b>.container {</b>
+                        <br>&nbsp;&nbsp;display: flex;
+                        <br>&nbsp;&nbsp;justify-content: space-between;
+                        <br>&nbsp;&nbsp;align-items: center;
+                        <br>&nbsp;&nbsp;gap: 15px;
+                        <br>&nbsp;&nbsp;flex-wrap: wrap;
+                    <br><b>}</b>
+                    </p>
+                </div>
+              <div class="twocolumns">
+                <div class="codebox code2">
+                    <p class="code"><b>.flex-item {</b>
+                        <br>&nbsp;&nbsp;padding: 10px;
+                        <br>&nbsp;&nbsp;background-color: lightblue;
+                        <br>&nbsp;&nbsp;flex: 1;
+                        <br>&nbsp;&nbsp;text-align: center;
+                    <br><b>}</b>
+                    </p>
+                </div>
+                <div class="codebox code2">
+                    <img src="../assets/css2.png">
+                </div>
+              </div>
+            <br>
+            <p class="theory-text">Explanation:</p>
+            <ul>
+                <li class="theory-text"><b>display:</b> Specifies how everything is displayed within that container (flex, block, grid...)</li>
+                <li class="theory-text"><b>justify-content:</b> Aligns items horizontally.</li>
+                <li class="theory-text"><b>align-items:</b> Aligns items vertically.</li>
+                <li class="theory-text"><b>text-align:</b> Aligns element to the top, bottom, left, middle or right.</li>
+                <li class="theory-text"><b>gap:</b> Spaces between items in a flexbox.</li>
+                <li class="theory-text"><b>flex:</b> Controls item growth and shrinkage.</li>
+                <li class="theory-text"><b>flex-wrap:</b> Manages item wrapping for responsiveness.</li>
+            </ul>
+          </div>
+          <div class="footer">
+            <img src="../assets/logo_big.png" class="logo-big">
+            <div class="footer-section learn-more">
+              <p class="footer-title">Learn More</p>
+              <p><a class="footer-links" href="../about.html">About Us</a></p>
+              <p><a class="footer-links">Privacy Policy</a></p>
+            </div>
+            <div class="footer-section more">
+              <p class="footer-title">More</p>
+              <p><a href="https://github.com/BlizzardTheWolf/htmlearn" class="footer-icon"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
+<script>
+    function scrollFunction() {
+    const element = document.getElementById('scrolldiv');
+    window.scrollTo({
+        top: element.offsetTop - 50, 
+        behavior: "smooth"
+    });
+}
+
+function searchFunction(event) {
+    event.preventDefault();
+    removeHighlights();
+    const searchQuery = document.getElementById('search').value.toLowerCase();
+    if (searchQuery.trim() === "") return;
+    const matches = highlightSearchTerm(searchQuery);
+    if (matches.length > 0) {
+        scrollToFirstMatch(matches);
+    } else {
+        alert('No results found.');
+    }
+}
+
+function highlightSearchTerm(searchQuery) {
+    const regex = new RegExp(`(${searchQuery})`, 'gi');
+    const matches = [];
+    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    while (node = walk.nextNode()) {
+        const match = node.textContent.match(regex);
+        if (match) {
+            const span = document.createElement('span');
+            const highlightedText = node.textContent.replace(regex, '<span class="highlighted">$1</span>');
+            span.innerHTML = highlightedText;
+            node.replaceWith(span);
+            matches.push(span);
+        }
+    }
+    return matches;
+}
+
+function scrollToFirstMatch(matches) {
+    const firstMatch = matches[0];
+    if (firstMatch) {
+        firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function removeHighlights() {
+    const highlightedElements = document.querySelectorAll('.highlighted');
+    highlightedElements.forEach(element => {
+        const parentNode = element.parentNode;
+        parentNode.replaceChild(document.createTextNode(element.textContent), element);
+    });
+}
+
+</script>

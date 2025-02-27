@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="nav-bar">
+            <a href="../index.html" id="logo-button"><div id="logo" class="fade-down"> 
+                <p class="logo-title">HTMLearn</p>
+                <img class= logo-small src="../assets/logo_small.png">
+            </div></a>
+            
+            <div id="menu" class="fade-down">
+                <a href="../index.html" class="menu-text" id="menu-home">Home</a>
+                <a href="../html/1.1.html" class="menu-text" id="menu-html">HTML</a>
+                <a class="arrow-down" id="arrow-down-html"><i class="fa-solid fa-caret-down"></i></a>
+                <a href="../css/1.1.html" class="menu-text" id="menu-css">CSS</a>
+                <a class="arrow-down" id="arrow-down-css"><i class="fa-solid fa-caret-down"></i></a>
+                <a href="../python/1.1.html" class="menu-text" id="menu-python">Python</a>
+                <a class="arrow-down" id="arrow-down-python"><i class="fa-solid fa-caret-down"></i></a>
+                <a href="../about.html" class="menu-text" id="menu-about">About Us</a>
+                <a href="https://github.com/BlizzardTheWolf/htmlearn" class="github-logo"><i class="fa-brands fa-github"></i></a>
+                <search>
+                  <form onsubmit="searchFunction(event)">
+                    <input name="search" id="search" placeholder="Search...">
+                  </form>
+                </search>
+            </div>
+          </div>
+          <div class="heading">
+            <div class="fade-up">
+                <a href="1.2.html" class="next-theory">1.2 &ensp;<i class="fa-solid fa-caret-right"></i></a>
+                <h1 class="title" id="alttitle">1.1 - Introduction to CSS</h1>
+                <h2 class="subtitle" id="subtitle">Basics, History, and Simple Styling</h2>
+                <a onclick="scrollFunction()"><i class="fa-solid fa-caret-down big-arrow-down"></i></a>
+            </div>
+          </div>
+          <div class="theory">
+            <h3 id="scrolldiv" class="theory-title">What is CSS?</h3>
+            <p class="theory-text"><b>CSS</b> (Cascading Style Sheets) is the foundational styling language for web design, enabling developers to define the appearance and layout of web pages. Introduced in 1996 by the World Wide Web Consortium (W3C), CSS standardized web design practices by separating content from presentation. Over time, CSS has evolved through multiple versions (CSS1, CSS2, CSS3) and modules, providing advanced features like animations, grid systems, and variables. Today, it is <b>essential</b> for crafting responsive, accessible, and visually cohesive websites.</p>
+            <h3 class="theory-title">What is CSS Used For?</h3>
+            <p class="theory-text">CSS governs the <b>visual presentation</b> of web pages, managing layouts, colors, fonts, and animations. It is indispensable for creating <b>responsive designs</b> that seamlessly adapt to various devices, including desktops, tablets, and smartphones. From simple text styling to complex interactive effects, CSS <b>transforms</b> raw HTML into engaging digital experiences.</p>
+            <h3 class="theory-title">Key Benefits of Using CSS:</h3>
+            <ul>
+                <li class="theory-text"><b>Separation of Content and Design:</b> Streamlines HTML structure and improves maintainability.</li>
+                <li class="theory-text"><b>Consistency Across Pages:</b> Enables centralized styles for uniformity.</li>
+                <li class="theory-text"><b>Improved Accessibility:</b> Facilitates compatibility with screen readers and ensures mobile responsiveness.</li>
+                <li class="theory-text"><b>Faster Load Times:</b> Minimizes redundancy through reusable styles.</li>
+                <li class="theory-text"><b>Scalablity: </b>Simplifies style management for large-scale projects.</li>
+                <li class="theory-text"><b>Cross-Browser Compatibility:</b> Ensures consistent appearance across different web browsers.</li>
+            </ul>
+            <h3 class="theory-title">CSS Theory and Syntax</h3>
+            <p class="theory-text">CSS rules are structured as selectors paired with declarations:</p>
+            <div class="codebox code2">
+                <p class="code"><b>.selector {</b>
+                    <br>&nbsp;&nbsp;property: value;
+                  <br><b>}</b>
+                </p>
+            </div>
+            <br>
+            <p class="theory-title"><b>Basic CSS Example:</b></p>
+            <div class="codebox code2">
+                <p class="code"><b>body {</b>
+                    <br>&nbsp;&nbsp;font-family: Arial;
+                    <br>&nbsp;&nbsp;background-color: lightgray;
+                  <b>}</b><br><br>
+                  <b>h1 {</b>
+                    <br>&nbsp;&nbsp;color: blue;
+                    <br>&nbsp;&nbsp;text-align: center;
+                    <br>&nbsp;&nbsp;font-size: 24px;
+                    <br>&nbsp;&nbsp;padding: 10px;
+                    <br>&nbsp;&nbsp;line-height: 1.5;<br>
+                  <b>}</b>
+                  </p>
+            </div>
+            <p class="theory-text"><b>Explanation:</b></p>
+            <ul>
+                <li class="theory-text"><b>font-family:</b> Specifies the typeface.</li>
+                <li class="theory-text"><b>background-color:</b> Defines background color.</li>
+                <li class="theory-text"><b>text-align:</b> Aligns text horizontally.</li>
+                <li class="theory-text"><b>padding:</b> Adds spacing within the element.</li>
+                <li class="theory-text"><b>line-height:</b> Controls vertical spacing between lines.</li>
+            </ul>
+            <br>
+            <h3 class="theory-title">Conclusion:</h3>
+            <p class="theory-text"><br><br> CSS is a fundamental part of modern web development, allowing designers and developers to craft visually appealing and highly functional websites. With its ability to separate content from design, ensure consistency, and enhance accessibility, CSS remains an indispensable tool in creating seamless and responsive user experiences. Mastering CSS opens the door to limitless creative possibilities in web design.</p>
+          </div>
+          <div class="footer">
+            <img src="../assets/logo_big.png" class="logo-big">
+            <div class="footer-section learn-more">
+              <p class="footer-title">Learn More</p>
+              <p><a class="footer-links" href="../about.html">About Us</a></p>
+              <p><a class="footer-links">Privacy Policy</a></p>
+            </div>
+            <div class="footer-section more">
+              <p class="footer-title">More</p>
+              <p><a href="https://github.com/BlizzardTheWolf/htmlearn" class="footer-icon"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
+<script>
+    function scrollFunction() {
+    const element = document.getElementById('scrolldiv');
+    window.scrollTo({
+        top: element.offsetTop - 50, 
+        behavior: "smooth"
+    });
+}
+
+function searchFunction(event) {
+    event.preventDefault();
+    removeHighlights();
+    const searchQuery = document.getElementById('search').value.toLowerCase();
+    if (searchQuery.trim() === "") return;
+    const matches = highlightSearchTerm(searchQuery);
+    if (matches.length > 0) {
+        scrollToFirstMatch(matches);
+    } else {
+        alert('No results found.');
+    }
+}
+
+function highlightSearchTerm(searchQuery) {
+    const regex = new RegExp(`(${searchQuery})`, 'gi');
+    const matches = [];
+    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    while (node = walk.nextNode()) {
+        const match = node.textContent.match(regex);
+        if (match) {
+            const span = document.createElement('span');
+            const highlightedText = node.textContent.replace(regex, '<span class="highlighted">$1</span>');
+            span.innerHTML = highlightedText;
+            node.replaceWith(span);
+            matches.push(span);
+        }
+    }
+    return matches;
+}
+
+function scrollToFirstMatch(matches) {
+    const firstMatch = matches[0];
+    if (firstMatch) {
+        firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function removeHighlights() {
+    const highlightedElements = document.querySelectorAll('.highlighted');
+    highlightedElements.forEach(element => {
+        const parentNode = element.parentNode;
+        parentNode.replaceChild(document.createTextNode(element.textContent), element);
+    });
+}
+
+</script>

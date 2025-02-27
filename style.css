@@ -526,7 +526,7 @@ body {
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 113px;
 
     background: linear-gradient(90deg, #00C4E3 62.9%, #003f61 100%);
@@ -541,7 +541,7 @@ body {
     margin-left: 50px;
     margin-bottom: 0px;
     font-family: "Albert Sans";
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     padding: 0px;
 }
