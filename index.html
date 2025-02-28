@@ -114,6 +114,7 @@
         </div>
       </div>
 </div>
+</div>
 </body>
 </html>
 <script>
@@ -128,48 +129,4 @@
     function searchFunction(event) {
     event.preventDefault();
     removeHighlights();
-    const searchQuery = document.getElementById('search').value.toLowerCase();
-    if (searchQuery.trim() === "") return;
-    const matches = highlightSearchTerm(searchQuery);
-    if (matches.length > 0) {
-        scrollToFirstMatch(matches);
-    } else {
-        alert('No results found.');
-    }
-}
-
-function highlightSearchTerm(searchQuery) {
-    const regex = new RegExp(`(${searchQuery})`, 'gi');
-    const matches = [];
-    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-    let node;
-    while (node = walk.nextNode()) {
-        const match = node.textContent.match(regex);
-        if (match) {
-            const span = document.createElement('span');
-            const highlightedText = node.textContent.replace(regex, '<span class="highlighted">$1</span>');
-            span.innerHTML = highlightedText;
-            node.replaceWith(span);
-            matches.push(span);
-        }
-    }
-    return matches;
-}
-
-function scrollToFirstMatch(matches) {
-    const firstMatch = matches[0];
-    if (firstMatch) {
-        firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-}
-
-function removeHighlights() {
-    const highlightedElements = document.querySelectorAll('.highlighted');
-    highlightedElements.forEach(element => {
-        const parentNode = element.parentNode;
-        parentNode.replaceChild(document.createTextNode(element.textContent), element);
-    });
-}
-
-</script>
-
+    const searchQuery = documen
