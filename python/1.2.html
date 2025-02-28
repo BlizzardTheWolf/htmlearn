@@ -51,30 +51,47 @@
                 <li class="theory-text"><b>Dictionaries:</b> Key-value pairs for efficient lookups.</li>
                 <li class="theory-text"><b>Deque (from collections): </b> A double-ended queue for efficient appends/pops.</li>
             </ul>
-            <h3 class="theory-title">Examples </h3>
-            <p class="theory-text">Python code is known for its simplicity and clarity:</p>
-            <br>
-            <p class="code code-indent"><b>print(</b>"Hello, World!"<b>)</b></p>
-            <br>
-            <ul>
-                <li class="theory-text"><b>Comments:</b> Start with # for single-line comments.</li>
-                <li class="theory-text"><b>print():</b> Outputs text to the console.</li>
-                <li class="theory-text"><b>Dynamic Typing:</b> Variables don't require explicit type declaration.</li>
-            </ul>
-            <p class="theory-title"><b>Basic Python Example:</b></p>
             <div class="codebox code2">
                 <p class="code">
-                    <b>name</b> = "Alice"<br>
-                    <b>age</b> = 30<br>
-                    <b>print(</b>f"{name} is {age} years old."<b>)</b><br>
+                    <b>my_list</b> = [1, 2, 3]<br>
+                    <b>my_tuple</b> = (1, 2, 3)<br>
+                    <b>my_set</b> = {1, 2, 3}<br>
+                    <b>my_dict</b> = {"key": "value"}<br>
+                </p>
+            </div>
+            <h3 class="theory-title">Functions in Python:</h3>
+            <div class="codebox code2">
+                <p class="code">
+                    <b>def greet(</b>name<b>)</b>:<br>
+                    <b>&nbsp;&nbsp;return</b>f"Hello, {name}!"
                 </p>
             </div>
             <p class="theory-text"><b>Explanation:</b></p>
             <ul>
-                <li class="theory-text"><b>Variables:</b> Created without explicit type declarations.</li>
-                <li class="theory-text"><b>f-strings:</b> Provide easy string formatting.</li>
-                <li class="theory-text"><b>Indentation:</b> Python uses indentation to define code blocks.</li>
+                <li class="theory-text"><b>def:</b> Declares a function.</li>
+                <li class="theory-text"><b>return:</b> Returns a value from a function.</li>
+                <li class="theory-text"><b>Indentation:</b> Python uses indentation to define code functions.</li>
             </ul>
+            <h3 class="theory-title">Object-Oriented Programming (OOP):</h3>
+            <div class="codebox code2">
+                <p class="code">
+                    <b>class Person:</b><br>
+                    <b>&nbsp;&nbsp;def __init__(</b>self, name, age<b>)</b>:<br>
+                    <b>&nbsp;&nbsp;&nbsp;&nbsp;self.name</b> = name<br>
+                    <b>&nbsp;&nbsp;&nbsp;&nbsp;self.age</b> = age<br><br>
+                    <b>&nbsp;&nbsp;def greet(</b>self<b>)</b>:<br>
+                    <b>&nbsp;&nbsp;&nbsp;&nbsp;return:</b> f"Hi, I'm <b>{self.name}</b> and I'm <b>{self.age}</b> years old."<br><br><br>
+                    <b>person</b> = Person("Bob", 25)<br>
+                    <b>print(</b>person.greet()<b>)</b>
+                </p>
+            </div>
+            <ul>
+                <li class="theory-text"><b>class:</b> Defines a class.</li>
+                <li class="theory-text"><b>init():</b> Initializes instance variables.</li>
+                <li class="theory-text"><b>self:</b> Refers to the instance of the class.</li>
+                <li class="theory-text"><b>Inheritance:</b> Allows classes to inherit attributes and methods from other classes.</li>
+            </ul>
+        </div>
           <div class="footer">
             <img src="../assets/logo_big.png" class="logo-big">
             <div class="footer-section learn-more">
