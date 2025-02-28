@@ -3,7 +3,211 @@
 <head>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <title>Python - 1.2</title>
+    <title>Python - 1.3</title>
     <link rel="icon" type="image/png" href="../assets/logo_small.png">
-
 </head>
+<body>
+    <div id="wrapper">
+        <div id="nav-bar">
+            <a href="../" id="logo-button"><div id="logo" class="fade-down"> 
+                <p class="logo-title">HTMLearn</p>
+                <img class= logo-small src="../assets/logo_small.png">
+            </div></a>
+            
+            <div id="menu" class="fade-down">
+                <a href="../" class="menu-text" id="menu-home">Home</a>
+                
+                <div class="dropdown">
+                    <a href="../html/1-1.html" class="menu-text" id="menu-html">HTML</a>
+                    <a class="arrow-down" id="arrow-down-html"><i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown-content" id="dropdownhtml">
+                        <a href="../html/1-1.html">1.1</a>
+                        <a href="../html/1-2.html">1.2</a>
+                        <a href="../html/1-3.html">1.3</a>
+                    </div>
+                </div>
+        
+                <div class="dropdown">
+                    <a href="../css/1-1.html" class="menu-text" id="menu-css">CSS</a>
+                    <a class="arrow-down" id="arrow-down-css"><i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown-content" id="dropdowncss">
+                        <a href="../css/1-1.html">1.1</a>
+                        <a href="../css/1-2.html">1.2</a>
+                        <a href="../css/1-3.html">1.3</a>
+                    </div>
+                </div>
+        
+                <div class="dropdown">
+                    <a href="../python/1-1.html" class="menu-text" id="menu-python">Python</a>
+                    <a class="arrow-down" id="arrow-down-python"><i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown-content" id="dropdownpython">
+                        <a href="../python/1-1.html">1.1</a>
+                        <a href="../python/1-2.html">1.2</a>
+                        <a href="../python/1-3.html">1.3</a>
+                    </div>
+                </div>
+        
+                <a href="../about.html" class="menu-text" id="menu-about">About Us</a>
+                <a href="https://github.com/BlizzardTheWolf/htmlearn" class="github-logo"><i class="fa-brands fa-github"></i></a>
+                <search>
+                    <form onsubmit="searchFunction(event)">
+                        <input name="search" id="search" placeholder="Search..." type="text">
+                    </form>
+                </search>
+            </div>
+        <div class="heading">
+            <div class="fade-up">
+                <a href="../python/1-2.html" class="previous-theory"><i class="fa-solid fa-caret-left"></i> &ensp;1.2</a>
+                <h1 class="title" id="alttitle">1.3 - Advanced Python</h1>
+                <h2 class="subtitle" id="subtitle">Decorators, Generators, Async</h2>
+                <a onclick="scrollFunction()"><i class="fa-solid fa-caret-down big-arrow-down"></i></a>
+            </div>
+        </div>
+        <div class="theory">
+            <h3 id="scrolldiv" class="theory-title">Advanced Python Overview</h3>
+            <p class="theory-text">Advanced Python techniques equip developers with the tools to write <b>highly efficient, scalable, and maintainable code</b>, optimizing performance and improving overall software design. At this stage, programmers explore powerful concepts such as decorators, generators, multithreading, and asynchronous programming, each of which enhances Python's flexibility and efficiency. Decorators provide a clean and reusable way to modify the behavior of functions or classes without altering their underlying code, making them invaluable for logging, authentication, and performance tracking. Generators, on the other hand, enable the creation of memory-efficient iterators using the yield keyword, allowing developers to handle large datasets and streams of data with minimal memory overhead. Multithreading and multiprocessing help optimize performance by running tasks in parallel, making applications more responsive and efficient, particularly in CPU-bound operations. Asynchronous programming with asyncio further enhances concurrency by allowing I/O-bound tasks, such as network requests and database operations, to run efficiently without blocking the main execution thread. By mastering these advanced Python techniques, developers can build high-performance applications, handle complex workflows, and write code that is both elegant and highly optimized for modern computing demands.</p>
+            <h3 class="theory-title">Decorators:</h3>
+            <div class="codebox code2">
+                <p class="code">
+                    <b>def decorator(</b>func<b>)</b>:<br>
+                    <b>&nbsp;&nbsp;def wrapper()</b>:<br>
+                    <b>&nbsp;&nbsp;&nbsp;&nbsp;print(</b>"Before the function call"<b>)</b><br>
+                    <b>&nbsp;&nbsp;&nbsp;&nbsp;func()</b><br>
+                    <b>&nbsp;&nbsp;&nbsp;&nbsp;print(</b>"After the function call"<b>)</b><br>
+                    <b>&nbsp;&nbsp;return </b>wrapper<br><br>
+                    <b>@decorator</b><br>
+                    <b>def say_hello()</b>:<br>
+                    <b>&nbsp;&nbsp;print(</b>"Hello!"<b>)</b><br><br>
+                    <b>say_hello()</b>
+                </p>
+            </div>
+            <p class="theory-text">Explanation:</p>
+            <ul>
+                <li class="theory-text"><b>@decorator:</b>Applies the decorator to a function.</li>
+                <li class="theory-text"><b>Higher-Order Functions:</b>Functions that take other functions as arguments.</li>
+                <li class="theory-text"><b>Closures:</b>Functions that retain access to their enclosing scope.</li>
+            </ul>
+            <h3 class="theory-title">Generators:</h3>
+            <div class="codebox code2">
+                <p class="code">
+                    <b>def count_up_to(</b>max<b>)</b>:<br>
+                    <b>&nbsp;&nbsp;count </b>= 1<br>
+                    <b>&nbsp;&nbsp;while </b>count <= max:<br>
+                    <b>&nbsp;&nbsp;&nbsp;&nbsp;yield </b>count<br>
+                    <b>&nbsp;&nbsp;&nbsp;&nbsp;count </b>+= 1<br><br>
+                    <b>for </b>number <b>in count_up_to(</b>5<b>)</b>:<br>
+                    <b>&nbsp;&nbsp;print(</b>number<b>)</b>
+                </p>
+            </div>
+            <p class="theory-text">Explanation:</p>
+            <ul>
+                <li class="theory-text"><b>yield:</b>Pauses and resumes function execution.</li>
+                <li class="theory-text"><b>Lazy Evaluation:</b>Generates values on-demand.</li>
+                <li class="theory-text"><b>Generator Expressions:</b>Provide concise generator syntax.</li>
+            </ul>
+            <h3 class="theory-title">Multithreading & Multiprocessing:</h3>
+            <div class="codebox code2">
+                <p class="code">
+                    <b>import </b>threading<br>
+                    <b>def print_numbers()</b>:<br>
+                    <b>&nbsp;&nbsp;for i in range(</b>5<b>):</b><br>
+                    <b>&nbsp;&nbsp;&nbsp;&nbsp;print(</b>i<b>)</b><br><br>
+                    <b>thread </b>= threading.Thread(<br>target=print_numbers)<br>
+                    <b>thread.</b>start()<br>
+                    <b>thread.</b>join()
+                </p>
+            </div>
+            <ul>
+                <li class="theory-text"><b>threading:</b>Runs code concurrently.</li>
+                <li class="theory-text"><b>thread.start():</b>Starts a thread.</li>
+                <li class="theory-text"><b>thread.join():</b>Waits for thread completion.</li>
+                <li class="theory-text"><b>Global Interpreter Lock (GIL):</b>Limits execution to one thread at a time in CPython.</li>
+            </ul>
+            <h3 class="theory-title">Asynchronous Programming:</h3>
+            <div class="codebox code2">
+                <p class="code">
+                    <b>import </b>asyncio<br>
+                    async <b>def main()</b>:<br>
+                    <b>&nbsp;&nbsp;print(</b>"Start"<b>)</b><br>
+                    <b>&nbsp;&nbsp;await </b>asyncio.sleep(2)<br>
+                    <b>&nbsp;&nbsp;print(</b>"End"<b>)</b><br><br>
+                    <b>asyncio.</b>run(<b>main()</b>)
+                </p>
+            </div>
+        </div>
+        <ul>
+            <li class="theory-text"><b>async/await:</b>Handles asynchronous operations.</li>
+            <li class="theory-text"><b>Event Loop:</b>Manages asynchronous tasks.</li>
+            <li class="theory-text"><b>Concurrency:</b>Executes tasks concurrently without blocking.</li>
+        </ul>
+        <div class="footer">
+            <img src="../assets/logo_big.png" class="logo-big">
+            <div class="footer-section learn-more">
+                <p class="footer-title">Learn More</p>
+                <p><a class="footer-links" href="../about.html">About Us</a></p>
+                <p><a class="footer-links">Privacy Policy</a></p>
+            </div>
+            <div class="footer-section more">
+                <p class="footer-title">More</p>
+                <p><a href="https://github.com/BlizzardTheWolf/htmlearn" class="footer-icon"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function scrollFunction() {
+    const element = document.getElementById('scrolldiv');
+    window.scrollTo({
+        top: element.offsetTop - 50, 
+        behavior: "smooth"
+    });
+}
+
+function searchFunction(event) {
+    event.preventDefault();
+    removeHighlights();
+    const searchQuery = document.getElementById('search').value.toLowerCase();
+    if (searchQuery.trim() === "") return;
+    const matches = highlightSearchTerm(searchQuery);
+    if (matches.length > 0) {
+        scrollToFirstMatch(matches);
+    } else {
+        alert('No results found.');
+    }
+}
+
+function highlightSearchTerm(searchQuery) {
+    const regex = new RegExp(`(${searchQuery})`, 'gi');
+    const matches = [];
+    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    while (node = walk.nextNode()) {
+        const match = node.textContent.match(regex);
+        if (match) {
+            const span = document.createElement('span');
+            const highlightedText = node.textContent.replace(regex, '<span class="highlighted">$1</span>');
+            span.innerHTML = highlightedText;
+            node.replaceWith(span);
+            matches.push(span);
+        }
+    }
+    return matches;
+}
+
+function scrollToFirstMatch(matches) {
+    const firstMatch = matches[0];
+    if (firstMatch) {
+        firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function removeHighlights() {
+    const highlightedElements = document.querySelectorAll('.highlighted');
+    highlightedElements.forEach(element => {
+        const parentNode = element.parentNode;
+        parentNode.replaceChild(document.createTextNode(element.textContent), element);
+    });
+}
+
+</script>
