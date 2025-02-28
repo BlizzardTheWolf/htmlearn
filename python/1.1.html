@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="nav-bar">
+            <a href="../index.html" id="logo-button"><div id="logo" class="fade-down"> 
+                <p class="logo-title">HTMLearn</p>
+                <img class= logo-small src="../assets/logo_small.png">
+            </div></a>
+            
+            <div id="menu" class="fade-down">
+                <a href="../index.html" class="menu-text" id="menu-home">Home</a>
+                <a href="../html/1.1.html" class="menu-text" id="menu-html">HTML</a>
+                <a class="arrow-down" id="arrow-down-html"><i class="fa-solid fa-caret-down"></i></a>
+                <a href="../css/1.1.html" class="menu-text" id="menu-css">CSS</a>
+                <a class="arrow-down" id="arrow-down-css"><i class="fa-solid fa-caret-down"></i></a>
+                <a href="../python/1.1.html" class="menu-text" id="menu-python">Python</a>
+                <a class="arrow-down" id="arrow-down-python"><i class="fa-solid fa-caret-down"></i></a>
+                <a href="../about.html" class="menu-text" id="menu-about">About Us</a>
+                <a href="https://github.com/BlizzardTheWolf/htmlearn" class="github-logo"><i class="fa-brands fa-github"></i></a>
+                <search>
+                  <form onsubmit="searchFunction(event)">
+                    <input name="search" id="search" placeholder="Search...">
+                  </form>
+                </search>
+            </div>
+          </div>
+          <div class="heading">
+            <div class="fade-up">
+                <a href="1.2.html" class="next-theory">1.2 &ensp;<i class="fa-solid fa-caret-right"></i></a>
+                <h1 class="title" id="alttitle">1.1 - Introduction to Python</h1>
+                <h2 class="subtitle" id="subtitle">Basics, History, and Simple Syntax</h2>
+                <a onclick="scrollFunction()"><i class="fa-solid fa-caret-down big-arrow-down"></i></a>
+            </div>
+          </div>
+          <div class="theory">
+            <h3 id="scrolldiv" class="theory-title">Introduction to Python</h3>
+            <p class="theory-text">Python is a powerful and versatile high-level <b>programming language</b>, widely recognized for its readability, simplicity, and efficiency. Originally developed by Guido van Rossum and released in 1991, Python has evolved into one of the most widely used programming languages across various industries. Its clean and intuitive syntax makes it easy to learn, even for beginners, while its extensive standard library and vast ecosystem of third-party modules provide developers with tools to tackle a diverse range of applications. Python is extensively used in web development, enabling the creation of dynamic websites and applications with frameworks like Django and Flask. In data science and machine learning, it plays a crucial role with libraries such as Pandas, NumPy, TensorFlow, and Scikit-learn, making it indispensable for analytics, AI, and predictive modeling. Additionally, Python excels in automation, scripting, cybersecurity, game development, and scientific computing, reinforcing its reputation as a general-purpose language suitable for almost any task. Its active community and continuous development ensure that Python remains at the forefront of modern programming, making it an essential skill for developers and technology enthusiasts alike.            </p>
+            <h3 class="theory-title">What is Python Used For?</h3>
+            <p class="theory-text">Python is used for a wide range of applications, from simple scripting to complex machine learning models. Its simplicity makes it accessible to beginners, while its powerful libraries and frameworks make it indispensable for professionals.</p>
+            <h3 class="theory-title">Key Benefits of Using Python:</h3>
+            <ul>
+                <li class="theory-text"><b>Readability and Simplicity:</b> Python's clean syntax makes code easier to write and maintain.</li>
+                <li class="theory-text"><b>Extensive Libraries and Frameworks:</b> A vast ecosystem supports various tasks.</li>
+                <li class="theory-text"><b>Cross-Platform Compatibility:</b> Python runs on different operating systems without modification.</li>
+                <li class="theory-text"><b>Strong Community Support:</b> A large community provides resources, tools, and libraries.</li>
+                <li class="theory-text"><b>Versatility: </b> Suitable for web development, data analysis, AI, and more.</li>
+                <li class="theory-text"><b>Dynamic Typing:</b> Allows for flexible and rapid development.</li>
+            </ul>
+            <h3 class="theory-title">Python Syntax Basics</h3>
+            <p class="theory-text">Python code is known for its simplicity and clarity:</p>
+            <br>
+            <p class="code code-indent"><b>print(</b>"Hello, World!"<b>)</b></p>
+            <br>
+            <ul>
+                <li class="theory-text"><b>Comments:</b> Start with # for single-line comments.</li>
+                <li class="theory-text"><b>print():</b> Outputs text to the console.</li>
+                <li class="theory-text"><b>Dynamic Typing:</b> Variables don't require explicit type declaration.</li>
+            </ul>
+            <p class="theory-title"><b>Basic Python Example:</b></p>
+            <div class="codebox code2">
+                <p class="code">
+                    <b>name</b> = "Alice"<br>
+                    <b>age</b> = 30<br>
+                    <b>print(</b>f"{name} is {age} years old."<b>)</b><br>
+                </p>
+            </div>
+            <p class="theory-text"><b>Explanation:</b></p>
+            <ul>
+                <li class="theory-text"><b>Variables:</b> Created without explicit type declarations.</li>
+                <li class="theory-text"><b>f-strings:</b> Provide easy string formatting.</li>
+                <li class="theory-text"><b>Indentation:</b> Python uses indentation to define code blocks.</li>
+            </ul>
+          <div class="footer">
+            <img src="../assets/logo_big.png" class="logo-big">
+            <div class="footer-section learn-more">
+              <p class="footer-title">Learn More</p>
+              <p><a class="footer-links" href="../about.html">About Us</a></p>
+              <p><a class="footer-links">Privacy Policy</a></p>
+            </div>
+            <div class="footer-section more">
+              <p class="footer-title">More</p>
+              <p><a href="https://github.com/BlizzardTheWolf/htmlearn" class="footer-icon"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
+<script>
+    function scrollFunction() {
+    const element = document.getElementById('scrolldiv');
+    window.scrollTo({
+        top: element.offsetTop - 50, 
+        behavior: "smooth"
+    });
+}
+
+function searchFunction(event) {
+    event.preventDefault();
+    removeHighlights();
+    const searchQuery = document.getElementById('search').value.toLowerCase();
+    if (searchQuery.trim() === "") return;
+    const matches = highlightSearchTerm(searchQuery);
+    if (matches.length > 0) {
+        scrollToFirstMatch(matches);
+    } else {
+        alert('No results found.');
+    }
+}
+
+function highlightSearchTerm(searchQuery) {
+    const regex = new RegExp(`(${searchQuery})`, 'gi');
+    const matches = [];
+    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    while (node = walk.nextNode()) {
+        const match = node.textContent.match(regex);
+        if (match) {
+            const span = document.createElement('span');
+            const highlightedText = node.textContent.replace(regex, '<span class="highlighted">$1</span>');
+            span.innerHTML = highlightedText;
+            node.replaceWith(span);
+            matches.push(span);
+        }
+    }
+    return matches;
+}
+
+function scrollToFirstMatch(matches) {
+    const firstMatch = matches[0];
+    if (firstMatch) {
+        firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+function removeHighlights() {
+    const highlightedElements = document.querySelectorAll('.highlighted');
+    highlightedElements.forEach(element => {
+        const parentNode = element.parentNode;
+        parentNode.replaceChild(document.createTextNode(element.textContent), element);
+    });
+}
+
+</script>
