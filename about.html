@@ -34,9 +34,11 @@
     <div class="heading">
       <div class="fade-up">
         <h1 class="title" id="aboutus">About Us</h1>
-        
+        <button onclick="scrollFunction()" class="button-get-started fade-up">Get started</button>
       </div>
+
     </div>
+    
     <div>
         <div class="fade-up">
             <h3 id="scrolldiv" class="theory-title">Task Distribution</h3>
@@ -63,6 +65,9 @@
                 <li class="theory-text">CSS: ?</li>
                 <li class="theory-text">Tekst: Daan</li>
             </ul>
+            <div id="contact-info">
+            <p class="theory-text"><b>Contact Info</b><br></p>
+            </div>
         </div>  
     </div>
     <div class="footer">
@@ -80,6 +85,14 @@
     </body>
 </html>
 <script>
+    function scrollFunction() {
+      const element = document.getElementById('contact-info')
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+
     function searchFunction(event) {
     event.preventDefault();
     removeHighlights();
